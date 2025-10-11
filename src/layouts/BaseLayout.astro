@@ -1,0 +1,28 @@
+---
+const { pageTitle } = Astro.props;
+import '../styles/global.css';
+import Footer from './src/pages/components/Footer.astro';
+import Header from './src/pages/components/Header.astro';
+
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{pageTitle}</title>
+	</head>
+	<body>
+		<Header />
+		<h1>Niles</h1>
+		<h1>This is the Home page.</h1>
+		<p>This is how you add to your site with making changes</p>
+<slot />
+		<Footer />
+		  <script>
+ import "../scripts/menu.js";
+  </script>
+	</body>
+</html>

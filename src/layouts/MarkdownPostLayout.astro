@@ -1,0 +1,13 @@
+---
+const { frontmatter } = Astro.props;
+import '../styles/global.css';
+import Footer from './src/pages/components/Footer.astro';
+import Header from './src/pages/components/Header.astro';
+---
+<meta charset="utf-8" />
+<Header />
+<h1>{frontmatter.title}</h1>
+<p>Written by {frontmatter.author}</p>
+<p>{frontmatter.pubDate}</p>
+<slot />
+<Footer />
